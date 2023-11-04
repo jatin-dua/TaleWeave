@@ -1,12 +1,12 @@
 import './index.css'
+import HomePage from './pages/HomePage'
+import RoomAccessPage from './pages/RoomAccessPage'
 
 function App() {
 
   return (
     <>
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <RoomAccessPage />
     </>
   )
 }
