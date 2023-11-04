@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.story-input::-webkit-scrollbar{
+    width: 1px;
+}
