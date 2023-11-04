@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { chatData } from "../Utils/chatData";
+import {v4 as uuidv4} from 'uuid';
 
 export default function GameScreen(){
 
@@ -11,11 +12,25 @@ export default function GameScreen(){
         setInputValue(evt.target.value)
     }
 
+    const addToChats = () => {
+            setChats((prev) => {
+                const newValue  = {id : uuidv4(), textData : inputValue, img : false};
+                return [...prev, newValue];
+            })
+            setInputValue('');
+    }
+
+    const checkEnterKey = (evt) => {
+        if(evt.key === "Enter"){
+            addToChats();
+        }
+    }
+
     return (
         <section className="game-screen">
             <div className="bg-img bg-[url(/game-screen.png)] w-full h-[100vh] fixed p-4">
                 <div className="chat-area bg-white border-2 h-[100%] w-[50%] rounded-xl p-4 flex flex-col-reverse justify-start">
-                    <textarea value={inputValue} onChange={handleChange} placeholder="Enter your text here.." className="story-input h-[30%] w-full border-2 border-gray-300 outline-none rounded-md mt-2 overflow-y-scroll overflow-x-hidden"></textarea>
+                    <textarea value={inputValue} onKeyDown={checkEnterKey} onChange={handleChange} placeholder="Enter your text here.." className="story-input h-[30%] w-full border-2 border-gray-300 outline-none rounded-md mt-2 overflow-y-scroll overflow-x-hidden"></textarea>
 
                     <div className="chats w-full h-[70%] border-2 rounded-md border-black p-3 flex flex-col gap-3 overflow-y-scroll">
                         {chats.map((chat) => {
