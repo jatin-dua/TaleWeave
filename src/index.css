@@ -7,3 +7,7 @@
 .story-input::-webkit-scrollbar{
     width: 1px;
 }
+
+.chats::-webkit-scrollbar{
+    width: 1px;
+}
