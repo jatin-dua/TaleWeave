@@ -7,7 +7,7 @@ export default function RoomAccessPage() {
         </div>
         <div className="code-container lg:w-[350px] w-[300px] h-[300px] lg:h-[450px] bg-[rgba(255,94,94,.4)] flex flex-col items-center justify-center gap-4 font-['Handlee'] rounded">
             <h1 className=" text-2xl uppercase">Access Code :</h1>
-            <input type="text" className=" w-[90%] h-[40px] rounded-lg outline-none text-center text-2xl font-medium" />
+            <input type="text" className="w-[90%] h-[40px] rounded-lg outline-none text-center text-2xl font-medium" />
         </div>
       </main>
     </div>
