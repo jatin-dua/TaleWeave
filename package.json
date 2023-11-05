@@ -1,8 +1,8 @@
 {
   "name": "taleweave",
   "private": true,
+  "proxy" : "http://192.168.112.102:5000/",
   "version": "0.0.0",
-  "proxy": "http://172.30.23.17:5000/response",
   "type": "module",
   "scripts": {
     "dev": "vite",

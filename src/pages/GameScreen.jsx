@@ -1,19 +1,22 @@
 import { useEffect, useState } from "react";
-import { chatData } from "../Utils/chatData";
 import { v4 as uuidv4 } from "uuid";
+
 
 export default function GameScreen() {
 
   const [chats, setChats] = useState([]);
 
+  const [feedback, setFeedback] = useState([])
+
   useEffect(() => {
     async function getInitialPlot(){
-        const response = await fetch('http://172.30.23.17:5000/plot');
+        const response = await fetch("http://192.168.112.102:5000/plot");
         const data  = await response.json();
         setChats([{id : 'AI', textData : data.content, img : false}])
     }
     getInitialPlot()
   },[])
+
 
   const [inputValue, setInputValue] = useState("");
 
@@ -32,12 +35,27 @@ export default function GameScreen() {
   const checkEnterKey = (evt) => {
     if (evt.key === "Enter") {
       addToChats();
+      componentDidMount();
     }
   };
 
+  async function componentDidMount() {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content: 'Hello' })
+    };
+    const response = await fetch("http://192.168.112.102:5000/response", requestOptions);
+    const data = await response.json();
+    setFeedback(data)
+}
+
+    
+
+
   return (
     <section className="game-screen">
-      <div className="bg-img bg-[url(./assets/game-screen.png)] w-full h-[100vh] fixed p-4">
+      <div className="bg-img bg-[url(./assets/game-screen.png)] w-full h-[100vh] fixed p-4 flex gap-5 shadow-lg items-center ">
         <div className="chat-area bg-white  h-[100%] w-[50%] rounded-xl p-4 flex flex-col-reverse justify-start">
           <textarea
             value={inputValue}
@@ -59,6 +77,10 @@ export default function GameScreen() {
               );
             })}
           </div>
+        </div>
+
+        <div className="feedback bg-white w-[250px] min-h-[200px] h-auto p-6 border-black border-2">
+         {feedback.content}
         </div>
       </div>
     </section>
