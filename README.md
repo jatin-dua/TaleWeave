@@ -39,4 +39,4 @@ In summary, *TaleWeave* offers a highly personalized, engaging, and accessible l
 
 ## Presentation
 
-[View Presentation on Google Drive]([https://docs.google.com/presentation/d/1Nf9HEryCZUr61kzdl0_FiIhObPc5W-xZ/edit?usp=sharing&ouid=115188039715498285806&rtpof=true&sd=true](https://docs.google.com/presentation/d/123YF9ffwxnAzaP61w-FdEpyNIqEzJOHi/edit?usp=sharing&ouid=115188039715498285806&rtpof=true&sd=true)https://docs.google.com/presentation/d/123YF9ffwxnAzaP61w-FdEpyNIqEzJOHi/edit?usp=sharing&ouid=115188039715498285806&rtpof=true&sd=true)
+[View Presentation on Google Drive](https://docs.google.com/presentation/d/123YF9ffwxnAzaP61w-FdEpyNIqEzJOHi/edit?usp=sharing&ouid=115188039715498285806&rtpof=true&sd=true)
