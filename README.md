@@ -36,3 +36,7 @@ In summary, *TaleWeave* offers a highly personalized, engaging, and accessible l
 2) **Daniyal Iqbal** ([daniyaal-14](https://github.com/daniyaal-14))
 3) **Mannas Narang** ([Mannas1](https://github.com/Mannas1))
 4) **Jatin Dua** ([Jatin Dua](https://github.com/JatinDua))
+
+## Presentation
+
+(https://docs.google.com/presentation/d/1Nf9HEryCZUr61kzdl0_FiIhObPc5W-xZ/edit usp=sharing&ouid=115188039715498285806&rtpof=true&sd=true)
