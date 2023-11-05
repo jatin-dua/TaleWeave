@@ -12,3 +12,7 @@
 .chats::-webkit-scrollbar{
     width: 1px;
 }
+
+.feedback::-webkit-scrollbar{
+    width: 1px;
+}

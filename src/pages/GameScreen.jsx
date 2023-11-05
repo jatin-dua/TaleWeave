@@ -79,8 +79,8 @@ export default function GameScreen() {
           </div>
         </div>
 
-        <div className="feedback bg-white w-[250px] min-h-[200px] h-auto p-6 border-black border-2">
-         {feedback.content}
+        <div className=" bg-white w-[40%] min-h-[200px] max-h-[300px] p-6 border-gray-400 border-2 rounded-lg flex">
+         {feedback.content ? <p className="feedback overflow-y-scroll">{feedback.content}</p> : <p>Loading</p>}
         </div>
       </div>
     </section>
